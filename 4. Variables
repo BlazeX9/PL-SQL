@@ -1,0 +1,43 @@
+DECLARE 
+   a integer := 10; 
+   b integer := 20; 
+   c integer; 
+BEGIN 
+   c := a + b; 
+   dbms_output.put_line('Value of c: ' || c);  
+END;
+
+
+Global variables − Variables declared in the outermost block or a package.
+Local variables − Variables declared in an inner block and not accessible to outer blocks.
+
+DECLARE   
+   num1 number := 95;     -- Global variables
+   num2 number := 85;  
+BEGIN  
+   dbms_output.put_line('Outer Variable num1: ' || num1); 
+   dbms_output.put_line('Outer Variable num2: ' || num2); 
+   DECLARE  
+      num1 number := 195;        -- Local variables 
+      num2 number := 185;  
+   BEGIN  
+      dbms_output.put_line('Inner Variable num1: ' || num1); 
+      dbms_output.put_line('Inner Variable num2: ' || num2); 
+   END;  
+END;
+
+
+Assigning SQL Query Results to PL/SQL Variables
+
+DECLARE 
+   c_id customers.id%type := 1; 
+   c_name  customers.name%type; 
+   c_addr customers.address%type; 
+   c_sal  customers.salary%type; 
+BEGIN 
+   SELECT name, address, salary INTO c_name, c_addr, c_sal 
+   FROM customers 
+   WHERE id = c_id;  
+   dbms_output.put_line 
+   ('Customer ' ||c_name || ' from ' || c_addr || ' earns ' || c_sal); 
+END; 
