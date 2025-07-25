@@ -1,11 +1,26 @@
-PL/SQL is combination of SQL and programming language which is developed by Oracle 
+What is PL/SQL?
+- Procedural Language for SQL is Oracle Corporation’s extension for SQL, combining SQL with procedural programming features like loops, conditions, functions, and triggers.
 
-Difference between SQL and PL/SQL
-- SQL is a structure query language that executes a single query at a time whereas PL/SQL is a procedural language and executes blocks of code at once which increases processing speed.
+Comparison between SQL and PL/SQL
+- SQL executes a single query at a time whereas PL/SQL executes blocks of code at once which increases processing speed.
 - PL/SQL provides support features like variables, if-else statements and loops. SQL does not support these features.
 - PL/SQL also offers error and exception-handling features that do not exist in SQL.
 - PL/SQL is used to write a programming block that has procedures, functions, triggers, packages and variables within its syntax. On the other hand SQL queries and commands are written using DDL and DML.
 
-Features
-- PL/SQL is a high-performance transaction processing language.
-- PL/SQL is opertating system independent.
+Basic structure of a PL/SQL block
+  DECLARE
+    -- variable declarations
+  BEGIN
+    -- executable statements
+  EXCEPTION
+    -- exception handling
+  END;
+
+Triggers
+- Triggers are stored programs activated automatically before or after DML operations (INSERT, UPDATE, DELETE) on a table
+
+Cursor
+- 
+
+Packages
+- 
